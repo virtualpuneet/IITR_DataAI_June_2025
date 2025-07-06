@@ -1,7 +1,9 @@
 # To convert number in your Base to your Base 10
 m = int(input ('your base:'))
-n = int(input ('Base 10 number:'))
-fin_out=str()
+n = int(input ('your base number:'))
+#fin_out=str()
+#split the number as seperate digits and multiply base to the power 0, 1, 2 and ...
+
 while n//m != 0:
     rem=n%m
     #print (rem)
