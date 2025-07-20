@@ -352,7 +352,7 @@ calculate_distance_3d(1, 2, 3, 4, 6, 9)  # Output: 7.810249675906654
 ```
 
 
-## Find Manhatten Distance
+## Find Manhattan Distance
 
 ### **Topic:** *Find Manhattan Distance*
 
@@ -394,7 +394,7 @@ manhattan_distance(-1, -1, 1, 1)  # Output: 4
 
 ## Write a function to return value of y given x on a straight line in 2D. It should take three arguments: m, c, x. 
 
-**Topic:** *Predict Y on a Straight Line (2D)*
+### **Topic:** *Predict Y on a Straight Line (2D)*
 
 ---
 
@@ -512,6 +512,59 @@ fit(0, 5, 2, 9)       # Output: (2.0, 5.0)
 ```
 
 > 💡 **Hint:** Make sure `x1` is not equal to `x2`, otherwise the slope would be undefined (vertical line). You may handle this case as you see fit.
+
+
+## find first derivate of a function that takes only one argument. 
+
+### **Topic:** *Find First Derivative of a Function*
+
+#### **Simple Explanation:**
+
+In mathematics, the *derivative* of a function tells us how fast the function's value is changing at a particular point.
+
+Think of it like this: if you’re driving a car and your distance changes every second, then your speed is the derivative of your distance. Similarly, for any function, the derivative gives the *rate of change*.
+
+We’ll use a simple numerical technique called the **difference method**:
+
+$$
+f'(x) \approx \frac{f(x + h) - f(x)}{h}
+$$
+
+This is called the **forward difference method**, where `h` is a very small number.
+
+---
+
+### **Exercise:**
+
+Write a function `approx_derivative(func, x, h)` that:
+
+* Takes a function `func` that accepts a single argument,
+* A value `x` where we want to find the derivative,
+* And a small number `h` (like `0.0001`),
+* Returns the approximate derivative of `func` at `x`.
+
+---
+
+### **Example Usage:**
+
+```python
+def square(x):
+    return x * x
+
+def cube(x):
+    return x * x * x
+
+print(approx_derivative(square, 3, 0.0001))  # Output: Approx. 6
+print(approx_derivative(cube, 2, 0.0001))    # Output: Approx. 12
+```
+
+---
+
+### **Note to Learner:**
+
+Try different values of `x` and different functions (like `math.sin`, `math.exp`, etc.) to see how the derivative changes.
+
+Make sure to import any libraries (like `math`) if needed.
 
 
 # Chapter 2. if - else
@@ -1064,17 +1117,51 @@ recursive_divide(7, 3)    # Output: (2, 1)
 recursive_divide(0, 1)    # Output: (0, 0)
 ```
 
-## Compute Sqrt
-## Compute CubeRoot
-## Compute nth Root
-## Compute Log base 10, you can use ** for power.
-## Compute log base n, you can use ** for power.
 ## Tower of hanoi
 
 # Chapter 4. Loops and Array
+
 ## Compute mean
 ## Compute SD
 ## Compute root mean square error in n-dimensions
 ## Compute mean absolute error  in n-dimensions
 ## Compute huber loss in n-dimensions
 ## Check if a point P is closer to point A or point B in N-Dimension
+## Compute Sqrt
+## Compute CubeRoot
+## Compute nth Root
+## Compute Log base 10, you can use ** for power.
+## Compute log base n, you can use ** for power.
+
+# Chapter 6. Dictionary and Sets
+
+# Chapter 5. Objects and Classes
+
+# Chapter 7. Binary Search
+
+# Chapter 8. Sorting
+
+# Chapter 9: Regression
+
+    ## Solve Equations - Gaussian Elimination
+
+        ### Build a fit() & predict() for two points with one feature. Manually.
+            y = mx + c, (x1, y1) and (x2, y2)
+        
+        ### Solve equations - One variable Equation, A*x = B
+            solve([[a b]])
+        ### Solve equations -  two variables Equation. First eliminate one variable and then use the previous function. 
+            - a*x + b*y = c
+            - a1*x + b1*y = c1
+        
+        ### Solve n Equations.
+        ### Solve Equations - y = a*x1 + b*x2 + c*x3 + d using above method.
+
+        ### Build a fit() & predict() for n points with n features.
+        ### Build a fit() & predict() with y = a*x*x + b*x + c. One feature and three equations
+
+    ## Approximations
+    ### What is the minimum value of y = 2*x^2 - 5x + 10 ? try using hit and trial
+    ### Write an algorithm to find minimum of second degree polynomial with coeffs [a, b, c].
+
+
